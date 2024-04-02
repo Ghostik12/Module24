@@ -11,6 +11,7 @@ namespace Module25
     public class AppContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         public AppContext() 
         {
@@ -19,7 +20,7 @@ namespace Module25
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-G7A32GR\SQLEXPRESS01;Database=EF;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-G7A32GR\SQLEXPRESS01;Database=Library;Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }
